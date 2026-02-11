@@ -1,0 +1,47 @@
+<html> 
+    <head> 
+        <title>Test Page</title> 
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"> 
+    </head> 
+    <body> 
+        
+        <div class="hearts-container"> 
+            <span class="heart">❤</span> 
+            <span class="heart">❤</span> 
+            <span class="heart">❤</span> 
+            <span class="heart">❤</span> 
+            <span class="heart">❤</span> 
+            <span class="heart">❤</span> 
+            <span class="heart">❤</span> 
+        </div> 
+        
+        <div class="full-page"> 
+            <div class="titlename"> 
+                <!-- <h1>User Information</h1> --> 
+                 <p class="titlecard">💕 Happy Valentine’s Day 💕</p> 
+                 <div class="teddy-container"> 
+                    <!-- <img src="{{ url_for('static', filename='img/teddy.png') }}" class="teddy"> -->
+                </div> 
+            </div> 
+            
+            <div class="content-title"> 
+                <div class="overall-content" id="questionBox"> 
+                    <p class="content-data">You are my valentine ? 💖</p> 
+                    <div class="button-container"> 
+                        <button class="yes-button" onclick="yesClicked()">Yes</button> 
+                        <button class="no-button" id="noBtn">No</button> 
+                    </div> 
+                    <p class="no-message" id="noMessage"> 💔 No… don’t do this to my heart </p> 
+                </div> <div class="popup" id="thankYouPopup"> 
+                    <div class="popup-content"> 
+                        <!-- <h2>Thank You 💕</h2> --> 
+                         <p>You made my Valentine special ❤️</p> 
+                         <div class="big-heart"> <p> I 💖 U</p> 
+                        </div> 
+                    </div> 
+                </div> 
+            </div> 
+        </div> 
+        <script src="{{ url_for('static', filename='js/script.js') }}"></script> 
+    </body> 
+    </html>

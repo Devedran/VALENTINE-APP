@@ -1,0 +1,37 @@
+.menubar{ display:flex; align-items: center; justify-content: center; background-color: blue; border-radius: 5px; } 
+html, body { height: 100%; margin: 0; } 
+.full-page { background: linear-gradient(135deg, #ff9a9e, #fad0c4); min-height: 100vh; } 
+.titlename{ display: flex; justify-content: center; color: rgb(243, 242, 242); } 
+.content-title{ display: flex; justify-content: center; align-items: center; margin-top: 50px; } 
+.hearts-container { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; overflow: hidden; } 
+.heart { position: absolute; top: -10%; font-size: 30px; color: #ff2d55; animation: fall 10s linear infinite, blink 3s ease-in-out infinite; } 
+@keyframes fall { 0% { transform: translateY(0); } 100% { transform: translateY(120vh); } } 
+@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } } 
+.heart:nth-child(1) { left: 10%; font-size: 24px; animation-duration: 12s, 3s; } 
+.heart:nth-child(2) { left: 25%; font-size: 30px; animation-duration: 10s, 2s; } 
+.heart:nth-child(3) { left: 40%; font-size: 20px; animation-duration: 14s, 4s; } 
+.heart:nth-child(4) { left: 55%; font-size: 28px; animation-duration: 11s, 3s; } 
+.heart:nth-child(5) { left: 80%; font-size: 22px; animation-duration: 10s, 2s; } 
+.heart:nth-child(6) { left: 90%; font-size: 22px; animation-duration: 15s, 2.5s; } 
+.heart:nth-child(7) { left: 70%; font-size: 22px; animation-duration: 18s, 4s; } 
+/* Teddy */ 
+.teddy-container { position: fixed; top: 20%; right: 49%; } 
+.teddy { width: 50px; animation: floatTeddy 3s ease-in-out infinite; }
+ @keyframes floatTeddy { 0% { transform: translateY(0); } 50% { transform: translateY(-15px); } 100% { transform: translateY(0); } } 
+ .teddy { animation: floatTeddy 4s ease-in-out infinite, blinkTeddy 3s infinite; } 
+ @keyframes blinkTeddy { 0%, 90%, 100% { opacity: 1; } 95% { opacity: 0.7; } } 
+ /* title */ 
+ .titlecard{ font-size:27px; margin-top: 50px; } 
+ .overall-content{ margin-top: 30px; } 
+ .content-data { display: flex; justify-content: center; align-items: center; font-size: larger; color: rgb(243, 242, 242); } 
+ .button-container{ display: flex; justify-content: center; align-items: center; gap: 3px; }
+ .yes-button{ background-color: #ff4d6d; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; } 
+ .no-button{ background-color: #999; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; } 
+ .no-message { display: none; margin-top: 15px; font-size: 18px; color: white; } 
+ /* Show message on NO hover */ 
+ .no-button:hover + .no-message { display: block; } 
+ .popup { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); justify-content: center; align-items: center; } 
+.popup-content { background: white; padding: 30px 50px; border-radius: 15px; text-align: center; animation: pop 0.5s ease; } 
+.big-heart { font-size: 50px; animation: pulse 1.5s infinite; } 
+@keyframes pop { from { transform: scale(0.5); opacity: 0; } to { transform: scale(1); opacity: 1; } } 
+@keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.3); } 100% { transform: scale(1); } }
